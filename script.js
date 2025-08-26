@@ -532,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createGlobalParticleEffect();
     }, 3500);
     
-    console.log('DMAN Website loaded! WAKKA WAKKA!');
+    console.log('$MALI Website loaded!');
     console.log('Controls:');
     console.log('- Spacebar: Trigger wakka effect');
     console.log('- W key: Intensify wakka animation');

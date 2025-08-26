@@ -214,47 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(entranceStyle);
     
-    // Add blockchain transaction effect
-    function createBlockchainEffect() {
-        const transaction = document.createElement('div');
-        transaction.className = 'blockchain-transaction';
-        transaction.textContent = '0x' + Math.random().toString(16).substr(2, 8);
-        transaction.style.cssText = `
-            position: fixed;
-            color: #fff;
-            font-size: 12px;
-            font-family: monospace;
-            pointer-events: none;
-            z-index: 5;
-            opacity: 0.7;
-            left: ${Math.random() * window.innerWidth}px;
-            top: ${Math.random() * window.innerHeight}px;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-        `;
-        
-        document.body.appendChild(transaction);
-        
-        transaction.animate([
-            {
-                transform: 'translateY(0)',
-                opacity: 0.7
-            },
-            {
-                transform: 'translateY(-100px)',
-                opacity: 0
-            }
-        ], {
-            duration: 3000,
-            easing: 'ease-out'
-        }).onfinish = () => {
-            transaction.remove();
-        };
-    }
+  
     
-    // Create blockchain effects periodically (start after loading)
-    setTimeout(() => {
-        setInterval(createBlockchainEffect, 5000);
-    }, 3500);
     
     // Add keyboard shortcuts
     document.addEventListener('keydown', function(e) {
